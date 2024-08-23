@@ -22,8 +22,12 @@ div1.appendChild(input)
 var inputHavalue = document.getElementById("inputValue")
 function myfunction(e) {
   var div2 = document.createElement("div")
+  var divflex = document.createElement("div")
+  divflex.classList.add("divflex")
+  div2.classList.add("div2")
   var divText = document.createTextNode(inputHavalue)
   div2.appendChild(divText)
-  div1.appendChild(div2)
+  divflex.appendChild(div2)
+  div1.appendChild(divflex)
 
 }
