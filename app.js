@@ -9,7 +9,7 @@ var headingTest = document.createTextNode("Todu work")
 div1.classList.add("div1")
 input.setAttribute("placeholder","what do to do?")
 input.classList.add("input1")
-input.setAttribute("onkeypress","myfunction(Event)")
+input.setAttribute("onkeypress","myfunction(event)")
 input.setAttribute("id","inputValue")
 
 heading.appendChild(headingTest)
@@ -21,11 +21,18 @@ div1.appendChild(input)
 
 var inputHavalue = document.getElementById("inputValue")
 function myfunction(e) {
+    
+ if(e.charCode === 13 ){
+    functionhu()
+ }
+
+}
+function functionhu() {
   var div2 = document.createElement("div")
   var divflex = document.createElement("div")
   divflex.classList.add("divflex")
   div2.classList.add("div2")
-  var divText = document.createTextNode(inputHavalue)
+  var divText = document.createTextNode(inputHavalue.value)
   div2.appendChild(divText)
   divflex.appendChild(div2)
   div1.appendChild(divflex)
