@@ -23,9 +23,9 @@ var inputHavalue = document.getElementById("inputValue")
 function myfunction(e) {
     
  if(e.charCode === 13 ){
-    functionhu()
- }
-
+   functionhu()
+  }
+  
 }
 function functionhu() {
   var div2 = document.createElement("div")
@@ -34,7 +34,21 @@ function functionhu() {
   div2.classList.add("div2")
   var divText = document.createTextNode(inputHavalue.value)
   div2.appendChild(divText)
+  var btn = document.createElement("button")
+  btn.setAttribute("class","fa-solid fa-xmark")
+  divflex.setAttribute("id","parent")
+  // var btntext = document.createTextNode("")
+  btn.setAttribute("onclick","cancelbtn(this)")
+  // btn.appendChild(btntext)
+  div2.appendChild(btn)
   divflex.appendChild(div2)
   div1.appendChild(divflex)
+  inputHavalue.value = ""
+  
+}
+
+function cancelbtn() {
+  var parent = document.getElementById("parent")
+  parent.parentNode.removeChild(parent)
 
 }
