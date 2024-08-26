@@ -36,7 +36,6 @@ function functionhu() {
   div2.appendChild(divText)
   var btn = document.createElement("button")
   btn.setAttribute("class","fa-solid fa-xmark")
-  divflex.setAttribute("id","parent")
   // var btntext = document.createTextNode("")
   btn.setAttribute("onclick","cancelbtn(this)")
   // btn.appendChild(btntext)
@@ -47,8 +46,9 @@ function functionhu() {
   
 }
 
-function cancelbtn() {
-  var parent = document.getElementById("parent")
-  parent.parentNode.removeChild(parent)
+function cancelbtn(e) {
+  var parentko = e.parentNode.parentNode
+  console.log(e)
+  div1.removeChild(parentko)
 
 }

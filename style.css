@@ -9,7 +9,7 @@
     background-color: whitesmoke;
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Andes_mountains_panoramic_view.jpg/1024px-Andes_mountains_panoramic_view.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 50vh;
+    background-size: 100%;
 }
 .div1{
     text-align: center;
